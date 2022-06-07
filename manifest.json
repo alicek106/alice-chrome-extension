@@ -1,0 +1,37 @@
+{
+  "name": "Project Alice Extension",
+  "description": "Project Alice Extension to aggregate images",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage",
+    "tabs",
+    "declarativeContent"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Project Alice",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/16.png",
+    "32": "images/32.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "contentscript.js"
+      ]
+    }
+  ]
+}

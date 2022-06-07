@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Alice Extension</title>
+    <style>
+        span {
+            margin: 10px
+        }
+        input {
+            margin: 10px
+        }
+        button {
+            margin: 10px
+        }
+    </style>
+</head>
+<body style="width: 400px">
+<div>
+    <div>
+        <span>Image Src Prefix :</span>
+        <input type="text" id="imageSrcPrefix" size="30">
+    </div>
+    <div>
+        <span>identifier Name :</span>
+        <input type="text" id="identifierName" minlength="10" maxlength="50" size="30">
+    </div>
+    <div>
+        <span>Identifier Number :</span>
+        <input type="text" id="identifierNumber" minlength="10" maxlength="30" size="30">
+    </div>
+    <button id="sendImageLinks" type="button">Send</button>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
