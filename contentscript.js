@@ -3,6 +3,12 @@ ENDPOINT_URL = "http://localhost:8000/"
 // 이 스크립트는 현재 웹 페이지 안에서 실행된다.
 // 따라서 웹 페이지의 dom에 접근할 수 있다.
 chrome.runtime.onMessage.addListener(async function (request, sender, sendResponse) {
+    chrome.storage.sync.set({
+        'imageSrcPrefix': request.imageSrcPrefix,
+        'identifierName': request.identifierName,
+        'identifierNumber': request.identifierNumber
+    });
+
     if (request.action === 'AGGREGATE') {
         aggregateImages(request)
     } else {

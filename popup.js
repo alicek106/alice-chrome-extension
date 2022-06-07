@@ -1,3 +1,9 @@
+chrome.storage.sync.get(['imageSrcPrefix', 'identifierName', 'identifierNumber'], ( {imageSrcPrefix, identifierName, identifierNumber} ) => {
+    document.getElementById('imageSrcPrefix').value = imageSrcPrefix
+    document.getElementById('identifierName').value = identifierName
+    document.getElementById('identifierNumber').value = identifierNumber
+});
+
 document.getElementById('sendImageLinks').addEventListener('click', () => {
     // 아래처럼 sendMessage를 하면 background.js의 이벤트 핸들러에서 수신한다.
     // chrome.runtime.sendMessage({ action: "TEST_ACTION" });
